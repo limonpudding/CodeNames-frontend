@@ -6,6 +6,15 @@ import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
 import { GameComponent } from './game/game.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { en_US } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import en from '@angular/common/locales/en';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+registerLocaleData(en);
 
 @NgModule({
   declarations: [
@@ -16,9 +25,14 @@ import { MainPageComponent } from './main-page/main-page.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    { provide: NZ_I18N, useValue: en_US }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
