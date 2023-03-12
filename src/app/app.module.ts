@@ -3,16 +3,51 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AuthComponent } from './auth/auth.component';
+import { GameComponent } from './game/game.component';
+import { MainPageComponent } from './main-page/main-page.component';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { en_US } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import en from '@angular/common/locales/en';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {NzGridModule} from 'ng-zorro-antd/grid';
+import {NzInputModule} from 'ng-zorro-antd/input';
+import {NzFormModule} from 'ng-zorro-antd/form';
+import {NzButtonModule} from 'ng-zorro-antd/button';
+import {NzSelectModule} from 'ng-zorro-antd/select';
+import {NzCheckboxModule} from 'ng-zorro-antd/checkbox';
+import {NzCardModule} from "ng-zorro-antd/card";
+
+registerLocaleData(en);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AuthComponent,
+    GameComponent,
+    MainPageComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        NzGridModule,
+        NzInputModule,
+        NzFormModule,
+        ReactiveFormsModule,
+        NzButtonModule,
+        NzSelectModule,
+        NzCheckboxModule,
+        NzCardModule
+    ],
+  providers: [
+    { provide: NZ_I18N, useValue: en_US }
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
