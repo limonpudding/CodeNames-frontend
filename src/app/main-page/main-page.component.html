@@ -6,7 +6,7 @@
     <nz-card class="content-card" nzTitle="Создать комнату">
       <form class="content-card__form" nz-form [formGroup]="createForm" (ngSubmit)="submitCreateForm()">
         <nz-form-item>
-          <nz-form-label class="content-card__form__label" nzFor="roomName" nzRequired>Название комнаты</nz-form-label>
+          <nz-form-label class="content-card__label" nzFor="roomName" nzRequired>Название комнаты</nz-form-label>
           <nz-form-control nzErrorTip="Пожалуйста введите название комнаты!">
             <input
               nz-input
@@ -17,7 +17,7 @@
             />
           </nz-form-control>
         </nz-form-item>
-        <nz-form-item>
+        <nz-form-item class="content-card__last-item">
           <nz-form-control>
             <button class="submit-button" nz-button nzType="primary" [disabled]="!createForm.valid">Создать</button>
           </nz-form-control>
@@ -27,7 +27,7 @@
     <nz-card class="content-card" nzTitle="Подключиться к комнате">
       <form class="content-card__form" nz-form [formGroup]="enterForm" (ngSubmit)="submitEnterForm()">
         <nz-form-item>
-          <nz-form-label class="content-card__form__label" nzFor="roomId" nzRequired>Идентификатор комнаты
+          <nz-form-label class="content-card__label" nzFor="roomId" nzRequired>Идентификатор комнаты
           </nz-form-label>
           <nz-form-control nzErrorTip="Пожалуйста введите идентификатор комнаты!">
             <input
@@ -39,7 +39,7 @@
             />
           </nz-form-control>
         </nz-form-item>
-        <nz-form-item>
+        <nz-form-item class="content-card__last-item">
           <nz-form-control>
             <button class="submit-button" nz-button nzType="primary" [disabled]="!enterForm.valid">Войти</button>
           </nz-form-control>
