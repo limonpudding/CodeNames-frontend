@@ -10,9 +10,16 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {NzGridModule} from 'ng-zorro-antd/grid';
+import {NzInputModule} from 'ng-zorro-antd/input';
+import {NzFormModule} from 'ng-zorro-antd/form';
+import {NzButtonModule} from 'ng-zorro-antd/button';
+import {NzSelectModule} from 'ng-zorro-antd/select';
+import {NzCheckboxModule} from 'ng-zorro-antd/checkbox';
+import {NzCardModule} from "ng-zorro-antd/card";
 
 registerLocaleData(en);
 
@@ -23,13 +30,21 @@ registerLocaleData(en);
     GameComponent,
     MainPageComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
-    BrowserAnimationsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        NzGridModule,
+        NzInputModule,
+        NzFormModule,
+        ReactiveFormsModule,
+        NzButtonModule,
+        NzSelectModule,
+        NzCheckboxModule,
+        NzCardModule
+    ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }
   ],
