@@ -1,5 +1,5 @@
 .wrapper {
-  padding: 0px 10px;
+  padding: 0 10px;
   max-width: 600px;
   margin: auto;
 }
@@ -11,11 +11,15 @@
   &__form {
     justify-content: end;
     gap: 16px 0;
+  }
 
-    &__label {
-      width: 200px;
-      text-align: left;
-    }
+  &__label {
+    width: 200px;
+    text-align: left;
+  }
+
+  &__last-item {
+    margin-bottom: 0;
   }
 }
 
